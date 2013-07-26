@@ -13,11 +13,16 @@ lame-3.99.5.tar.gz
 http://sourceforge.net/projects/lame/
 只需要配置prefix
 
+(2)安装ogg和vorbis库
+libogg-1.3.1.tar.gz和libvorbis-1.3.3.tar.gz
+http://xiph.org/downloads/
+只需要配置prefix
+
 (2)安装ffmpeg
 FFmpeg-master.zip
 https://github.com/FFmpeg/FFmpeg
 非root用户，需要配置--extra-cflags和--extra-ldflags
-./configure --prefix=/home/work/ffmpeg --enable-shared --enable-libmp3lame --enable-gpl --disable-yasm --disable-ffserver --disable-ffplay --extra-cflags="-I /home/work/ffmpeg/include" --extra-ldflags="-L /home/work/ffmpeg/lib"
+./configure --prefix=/home/work/ffmpeg --enable-shared --enable-libmp3lame --enable-gpl --disable-yasm --disable-ffserver --disable-ffplay --extra-cflags="-I /home/work/ffmpeg/include" --extra-ldflags="-L /home/work/ffmpeg/lib" --enable-libvorbis
 
 使用时
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/work/ffmpeg/lib
